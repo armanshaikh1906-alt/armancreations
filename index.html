@@ -23,7 +23,7 @@
                 <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer" onclick="window.scrollTo(0, 0)">
                     <div class="w-10 h-10 rounded-xl overflow-hidden shadow-lg shadow-pink-200 border border-pink-100 bg-white">
                         <!-- paste logo image url here -->
-                        <img src="https://i.postimg.cc/NjzF0148/Chat-GPT-Image-Apr-2-2026-05-51-24-PM.png">
+                        <img src="https://i.postimg.cc/NjzF0148/Chat-GPT-Image-Apr-2-2026-05-51-24-PM.png" alt="Logo" class="w-full h-full object-cover aspect-square">
                     </div>
                     <span class="font-bold text-xl tracking-tight text-slate-900">Arman<span class="text-pink-500">Creations</span></span>
                 </div>
@@ -167,7 +167,7 @@
             <div class="flex items-center gap-2">
                 <div class="w-8 h-8 rounded-lg overflow-hidden border border-pink-100 bg-white">
                     <!-- paste logo image url here -->
-                    <img src="https://i.postimg.cc/NjzF0148/Chat-GPT-Image-Apr-2-2026-05-51-24-PM.png">
+                    <img src="https://i.postimg.cc/NjzF0148/Chat-GPT-Image-Apr-2-2026-05-51-24-PM.png" alt="Logo" class="w-full h-full object-cover aspect-square">
                 </div>
                 <span class="font-bold text-slate-800">Arman Creations</span>
             </div>
@@ -192,13 +192,16 @@
     <!-- JavaScript Logic -->
     <script>
         // --- 🛠️ CUSTOMIZE YOUR LINKS HERE ---
-        const WHATSAPP_NUMBER = "918320679709"; // Put your WhatsApp number with country code (no '+' sign)
-        const WHATSAPP_MESSAGE = "Hi Arman, I saw your website and want to build an app!";
-        const INSTAGRAM_HANDLE = "minding.ourself"; 
         
-        const whatsappBaseLink = `https://wa.me/${918320679709}`;
-        const mainWhatsappLink = `${https://wa.me/${918320679709}}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
-        const instagramLink = `https://instagram.com/${minding.ourself}`;
+        // paste whatsapp link here (for your main contact buttons)
+        const mainWhatsappLink = "https://wa.me/918320679709?text=Hi%20Arman,%20I%20saw%20your%20website%20and%20want%20to%20build%20an%20app!";
+        
+        // paste instagram link here
+        const instagramLink = "https://www.instagram.com/minding.ourself?igsh=MXRncDN2emZnMnBrZA==";
+        
+        // paste your base whatsapp link here (just the phone number link, used for specific project inquiries)
+        const whatsappBaseLink = "https://wa.me/918320679709";
+        
         // ------------------------------------
 
         // Set global links
@@ -246,7 +249,7 @@
         };
 
         // --- 🚀 ADD YOUR PROJECTS HERE ---
-        const categories = ['All', 'Digital Album', 'Birthday Wish', 'Anniversary Wish'];
+        const categories = ['All', 'Digital Album', ];
         let activeCategory = 'All';
 
         const projects = [
@@ -255,37 +258,11 @@
                 title: "Interactive Wedding Album",
                 category: "Digital Album",
                 description: "A beautiful digital gallery converting traditional wedding photos into an interactive experience.", // write project description here
-                imageUrl: "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=800&q=80", // paste project image url here
-                demoUrl: "https://your-demo-website.com", // paste webpage url here
-                tags: ["Gallery", "Memories", "UI/UX"]
+                imageUrl: "https://i.postimg.cc/T3WT2BHq/Whats-App-Image-2026-04-02-at-7-26-37-PM.jpg", // paste project image url here
+                demoUrl: "https://comforting-strudel-abbf60.netlify.app", // paste webpage url here
+                tags: ["Gallery", "Memories", "album"]
             },
-            {
-                id: 2,
-                title: "Surprise Birthday Website",
-                category: "Birthday Wish",
-                description: "A personalized website featuring animations, music, and special messages for a birthday celebration.", // write project description here
-                imageUrl: "https://images.unsplash.com/photo-1530103862676-de8892795db5?auto=format&fit=crop&w=800&q=80", // paste project image url here
-                demoUrl: "https://your-demo-website.com", // paste webpage url here
-                tags: ["Animation", "Celebration"]
-            },
-            {
-                id: 3,
-                title: "Golden Anniversary Timeline",
-                category: "Anniversary Wish",
-                description: "A heartfelt scrollable timeline highlighting years of beautiful moments together.", // write project description here
-                imageUrl: "https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=800&q=80", // paste project image url here
-                demoUrl: "https://your-demo-website.com", // paste webpage url here
-                tags: ["Timeline", "Love"]
-            },
-            {
-                id: 4,
-                title: "Travel Memories Gallery",
-                category: "Digital Album",
-                description: "An elegant grid-based digital album preserving memories from various travel destinations.", // write project description here
-                imageUrl: "https://images.unsplash.com/photo-1488085061387-422e29b40080?auto=format&fit=crop&w=800&q=80", // paste project image url here
-                demoUrl: "https://your-demo-website.com", // paste webpage url here
-                tags: ["Travel", "Photos"]
-            }
+            
         ];
 
         // Render Filter Buttons
