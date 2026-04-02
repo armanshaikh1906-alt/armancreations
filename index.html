@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arman Creations | Web Developer</title>
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons for consistent vector icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Smooth scrolling behavior for anchor links */
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+<body class="min-h-screen bg-white text-slate-800 font-sans selection:bg-pink-200 selection:text-pink-900">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 top-0 bg-white/80 backdrop-blur-md border-b border-pink-100 shadow-sm shadow-pink-50/50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer" onclick="window.scrollTo(0, 0)">
+                    <div class="w-10 h-10 rounded-xl overflow-hidden shadow-lg shadow-pink-200 border border-pink-100 bg-white">
+                        <!-- paste logo image url here -->
+                        <img src="https://ui-avatars.com/api/?name=A+C&background=f472b6&color=fff&size=128" alt="Logo" class="w-full h-full object-cover aspect-square">
+                    </div>
+                    <span class="font-bold text-xl tracking-tight text-slate-900">Arman<span class="text-pink-500">Creations</span></span>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <button onclick="scrollToSection('work')" class="text-slate-600 hover:text-pink-500 transition-colors text-sm font-medium">My Work</button>
+                    <button onclick="scrollToSection('contact')" class="text-slate-600 hover:text-pink-500 transition-colors text-sm font-medium">Contact Me</button>
+                    <a id="nav-whatsapp-link" href="#" target="_blank" rel="noopener noreferrer"
+                       class="bg-gradient-to-r from-pink-400 to-blue-400 hover:from-pink-500 hover:to-blue-500 text-white px-5 py-2.5 rounded-full font-medium transition-all transform hover:scale-105 hover:shadow-[0_0_20px_rgba(236,72,153,0.4)] flex items-center gap-2 text-sm">
+                        Let's Talk <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-600 hover:text-pink-500 p-2">
+                        <i data-lucide="menu" id="menu-icon-open" class="w-6 h-6"></i>
+                        <i data-lucide="x" id="menu-icon-close" class="w-6 h-6 hidden"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-pink-100 absolute w-full shadow-lg shadow-pink-100/50">
+            <div class="px-4 pt-2 pb-6 space-y-4">
+                <button onclick="scrollToSection('work')" class="block w-full text-left px-3 py-2 text-base font-medium text-slate-600 hover:text-pink-500 hover:bg-pink-50 rounded-lg">My Work</button>
+                <button onclick="scrollToSection('contact')" class="block w-full text-left px-3 py-2 text-base font-medium text-slate-600 hover:text-pink-500 hover:bg-pink-50 rounded-lg">Contact Me</button>
+                <a id="mobile-whatsapp-link" href="#" target="_blank" rel="noopener noreferrer"
+                   class="block w-full text-center bg-gradient-to-r from-pink-400 to-blue-400 text-white px-3 py-3 rounded-xl font-medium mt-4 shadow-md shadow-pink-200">
+                    Start a Project
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-slate-50/50">
+        <!-- Background attractive glow effects -->
+        <div class="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-pink-300/30 rounded-full blur-[100px] pointer-events-none"></div>
+        <div class="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-blue-300/30 rounded-full blur-[100px] pointer-events-none"></div>
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-yellow-200/30 rounded-full blur-[120px] pointer-events-none"></div>
+
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-3xl mx-auto">
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-pink-200 text-pink-500 text-sm font-semibold mb-8 shadow-sm shadow-pink-100">
+                    <i data-lucide="sparkles" class="w-4 h-4 text-yellow-400"></i>
+                    Available for freelance projects
+                </div>
+                <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-8 text-slate-900">
+                    I build <span class="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-yellow-400 to-blue-500">beautiful</span> web experiences.
+                </h1>
+                <p class="text-lg md:text-xl text-slate-600 mb-10 leading-relaxed max-w-2xl mx-auto">
+                    Welcome to Arman Creations. I design and develop stunning, high-performance web applications. Convert your album into a digital album, and send wishes for different occasions in unique ways. See something you like? Let's build yours next.
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <button onclick="scrollToSection('work')"
+                            class="w-full sm:w-auto bg-pink-500 hover:bg-pink-600 text-white shadow-lg shadow-pink-200 px-8 py-4 rounded-full font-bold text-lg transition-all flex items-center justify-center transform hover:scale-105">
+                        View My Work
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Showcase Section -->
+    <section id="work" class="py-20 bg-blue-50/50 border-y border-blue-100 relative overflow-hidden">
+        <!-- Subtle background decoration -->
+        <div class="absolute right-0 top-0 w-64 h-64 bg-yellow-100/50 rounded-full blur-[80px] -z-10"></div>
+        <div class="absolute left-0 bottom-0 w-64 h-64 bg-pink-100/50 rounded-full blur-[80px] -z-10"></div>
+
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-6">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-extrabold mb-4 text-slate-900">Featured Work</h2>
+                    <p class="text-slate-600 max-w-xl text-lg">
+                        Explore some of the beautiful digital experiences I've created. Select a category below to view my specific projects.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Category Filter Buttons -->
+            <div id="category-filters" class="flex flex-wrap gap-3 mb-10">
+                <!-- Filters injected by JavaScript -->
+            </div>
+
+            <!-- Projects Grid -->
+            <div id="project-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Projects injected by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 relative overflow-hidden bg-yellow-50/30">
+        <!-- Subtle background decoration -->
+        <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-pink-100/40 rounded-full blur-[100px] -z-10"></div>
+
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <h2 class="text-4xl md:text-5xl font-extrabold mb-6 text-slate-900">Let's build your dream website.</h2>
+            <p class="text-lg text-slate-600 mb-12 max-w-2xl mx-auto">
+                Ready to bring your ideas to life? I'm currently available for freelance projects. Send me a message and let's chat about your requirements.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+                <!-- WhatsApp Card -->
+                <a id="contact-whatsapp-link" href="#" target="_blank" rel="noopener noreferrer"
+                   class="w-full sm:w-auto flex items-center gap-4 bg-white border border-[#25D366]/30 hover:border-[#25D366] shadow-sm hover:shadow-lg hover:shadow-[#25D366]/10 p-6 rounded-2xl transition-all group">
+                    <div class="w-12 h-12 bg-[#25D366]/10 rounded-full flex items-center justify-center text-[#25D366] group-hover:bg-[#25D366] group-hover:text-white transition-all duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-7 h-7">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                        </svg>
+                    </div>
+                    <div class="text-left">
+                        <div class="text-sm text-slate-500 font-medium mb-1">Fastest Response</div>
+                        <div class="text-xl font-bold text-slate-900">WhatsApp Me</div>
+                    </div>
+                </a>
+
+                <!-- Instagram Card -->
+                <a id="contact-instagram-link" href="#" target="_blank" rel="noopener noreferrer"
+                   class="w-full sm:w-auto flex items-center gap-4 bg-white border border-pink-200 hover:border-pink-400 shadow-sm hover:shadow-lg hover:shadow-pink-200/40 p-6 rounded-2xl transition-all group">
+                    <div class="w-12 h-12 bg-pink-50 rounded-full flex items-center justify-center text-pink-500 group-hover:bg-gradient-to-tr group-hover:from-[#FFDC80] group-hover:via-[#FD1D1D] group-hover:to-[#405DE6] group-hover:text-white transition-all duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                        </svg>
+                    </div>
+                    <div class="text-left">
+                        <div class="text-sm text-slate-500 font-medium mb-1">Follow & DM</div>
+                        <div class="text-xl font-bold text-slate-900">Instagram</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-200 bg-white py-10">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-2">
+                <div class="w-8 h-8 rounded-lg overflow-hidden border border-pink-100 bg-white">
+                    <!-- paste logo image url here -->
+                    <img src="https://ui-avatars.com/api/?name=A+C&background=f472b6&color=fff&size=128" alt="Logo" class="w-full h-full object-cover aspect-square">
+                </div>
+                <span class="font-bold text-slate-800">Arman Creations</span>
+            </div>
+            <p class="text-slate-500 text-sm font-medium">
+                © <span id="current-year"></span> Arman Creations. All rights reserved.
+            </p>
+            <div class="flex gap-4">
+                <a id="footer-instagram-link" href="#" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-pink-500 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                    </svg>
+                </a>
+                <a id="footer-whatsapp-link" href="#" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-[#25D366] transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Logic -->
+    <script>
+        // --- 🛠️ CUSTOMIZE YOUR LINKS HERE ---
+        const WHATSAPP_NUMBER = "919876543210"; // Put your WhatsApp number with country code (no '+' sign)
+        const WHATSAPP_MESSAGE = "Hi Arman, I saw your website and want to build an app!";
+        const INSTAGRAM_HANDLE = "your_instagram_username"; 
+        
+        const whatsappBaseLink = `https://wa.me/${WHATSAPP_NUMBER}`;
+        const mainWhatsappLink = `${whatsappBaseLink}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
+        const instagramLink = `https://instagram.com/${INSTAGRAM_HANDLE}`;
+        // ------------------------------------
+
+        // Set global links
+        document.getElementById('nav-whatsapp-link').href = mainWhatsappLink;
+        document.getElementById('mobile-whatsapp-link').href = mainWhatsappLink;
+        document.getElementById('contact-whatsapp-link').href = mainWhatsappLink;
+        document.getElementById('footer-whatsapp-link').href = mainWhatsappLink;
+        document.getElementById('contact-instagram-link').href = instagramLink;
+        document.getElementById('footer-instagram-link').href = instagramLink;
+        
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Mobile Menu Toggle Logic
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIconOpen = document.getElementById('menu-icon-open');
+        const menuIconClose = document.getElementById('menu-icon-close');
+        let isMenuOpen = false;
+
+        mobileMenuBtn.addEventListener('click', () => {
+            isMenuOpen = !isMenuOpen;
+            if (isMenuOpen) {
+                mobileMenu.classList.remove('hidden');
+                menuIconOpen.classList.add('hidden');
+                menuIconClose.classList.remove('hidden');
+            } else {
+                mobileMenu.classList.add('hidden');
+                menuIconOpen.classList.remove('hidden');
+                menuIconClose.classList.add('hidden');
+            }
+        });
+
+        // Smooth Scroll Logic
+        window.scrollToSection = function(id) {
+            isMenuOpen = false;
+            mobileMenu.classList.add('hidden');
+            menuIconOpen.classList.remove('hidden');
+            menuIconClose.classList.add('hidden');
+            
+            const element = document.getElementById(id);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        };
+
+        // --- 🚀 ADD YOUR PROJECTS HERE ---
+        const categories = ['All', 'Digital Album', 'Birthday Wish', 'Anniversary Wish'];
+        let activeCategory = 'All';
+
+        const projects = [
+            {
+                id: 1,
+                title: "Interactive Wedding Album",
+                category: "Digital Album",
+                description: "A beautiful digital gallery converting traditional wedding photos into an interactive experience.", // write project description here
+                imageUrl: "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=800&q=80", // paste project image url here
+                demoUrl: "https://your-demo-website.com", // paste webpage url here
+                tags: ["Gallery", "Memories", "UI/UX"]
+            },
+            {
+                id: 2,
+                title: "Surprise Birthday Website",
+                category: "Birthday Wish",
+                description: "A personalized website featuring animations, music, and special messages for a birthday celebration.", // write project description here
+                imageUrl: "https://images.unsplash.com/photo-1530103862676-de8892795db5?auto=format&fit=crop&w=800&q=80", // paste project image url here
+                demoUrl: "https://your-demo-website.com", // paste webpage url here
+                tags: ["Animation", "Celebration"]
+            },
+            {
+                id: 3,
+                title: "Golden Anniversary Timeline",
+                category: "Anniversary Wish",
+                description: "A heartfelt scrollable timeline highlighting years of beautiful moments together.", // write project description here
+                imageUrl: "https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=800&q=80", // paste project image url here
+                demoUrl: "https://your-demo-website.com", // paste webpage url here
+                tags: ["Timeline", "Love"]
+            },
+            {
+                id: 4,
+                title: "Travel Memories Gallery",
+                category: "Digital Album",
+                description: "An elegant grid-based digital album preserving memories from various travel destinations.", // write project description here
+                imageUrl: "https://images.unsplash.com/photo-1488085061387-422e29b40080?auto=format&fit=crop&w=800&q=80", // paste project image url here
+                demoUrl: "https://your-demo-website.com", // paste webpage url here
+                tags: ["Travel", "Photos"]
+            }
+        ];
+
+        // Render Filter Buttons
+        function renderFilters() {
+            const filtersContainer = document.getElementById('category-filters');
+            filtersContainer.innerHTML = categories.map(category => {
+                const isActive = activeCategory === category;
+                const activeClasses = "bg-pink-500 text-white shadow-md shadow-pink-200 scale-105";
+                const inactiveClasses = "bg-white text-slate-600 border border-pink-200 hover:border-pink-400 hover:text-pink-500 hover:shadow-sm";
+                
+                return `
+                    <button
+                        onclick="setCategory('${category}')"
+                        class="px-5 py-2.5 rounded-full text-sm font-bold transition-all duration-300 ${isActive ? activeClasses : inactiveClasses}"
+                    >
+                        ${category}
+                    </button>
+                `;
+            }).join('');
+        }
+
+        // Render Projects
+        function renderProjects() {
+            const gridContainer = document.getElementById('project-grid');
+            const filteredProjects = activeCategory === 'All' 
+                ? projects 
+                : projects.filter(p => p.category === activeCategory);
+
+            gridContainer.innerHTML = filteredProjects.map(project => {
+                // Generate tags HTML
+                const tagsHtml = project.tags.map(tag => `
+                    <span class="text-xs font-semibold px-3 py-1 bg-pink-50 text-pink-600 border border-pink-100 rounded-full">
+                        ${tag}
+                    </span>
+                `).join('');
+
+                // Generate specific WhatsApp Message for this project
+                const projectMessage = `Hi Arman, I really like your "${project.title}" ${project.category.toLowerCase()}. Can we discuss building something similar?`;
+                const projectWhatsappLink = `${whatsappBaseLink}?text=${encodeURIComponent(projectMessage)}`;
+
+                // WhatsApp SVG (same as React component)
+                const whatsappSvg = `
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                    </svg>
+                `;
+
+                return `
+                    <div class="group relative bg-white border border-blue-100 rounded-3xl overflow-hidden hover:border-pink-300 transition-all duration-300 hover:shadow-[0_15px_40px_-10px_rgba(236,72,153,0.15)] hover:-translate-y-1 flex flex-col">
+                        <!-- Project Image Banner -->
+                        <div class="w-full h-48 bg-pink-50 overflow-hidden border-b border-blue-50">
+                            <img src="${project.imageUrl}" alt="${project.title}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                        </div>
+                        
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-xl font-bold mb-3 text-slate-900">${project.title}</h3>
+                            <p class="text-slate-600 mb-6 text-sm leading-relaxed flex-grow">
+                                ${project.description}
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                ${tagsHtml}
+                            </div>
+                            
+                            <div class="flex flex-col gap-3 mt-auto">
+                                <!-- See Demo Button -->
+                                <a href="${project.demoUrl}" target="_blank" rel="noopener noreferrer"
+                                   class="w-full text-center bg-gradient-to-r from-pink-400 to-blue-400 hover:from-pink-500 hover:to-blue-500 text-white font-bold py-2.5 rounded-xl transition-all shadow-md shadow-pink-200 flex items-center justify-center gap-2">
+                                    See Demo <i data-lucide="external-link" class="w-4 h-4"></i>
+                                </a>
+
+                                <!-- WhatsApp Inquiry Button -->
+                                <a href="${projectWhatsappLink}" target="_blank" rel="noopener noreferrer"
+                                   class="w-full text-center bg-white border border-slate-200 hover:border-[#25D366] text-slate-700 hover:text-[#25D366] font-bold py-2.5 rounded-xl transition-all flex items-center justify-center gap-2">
+                                    Want this? ${whatsappSvg}
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+
+            // Re-initialize icons since DOM was updated
+            lucide.createIcons();
+        }
+
+        // Change Category Action
+        window.setCategory = function(category) {
+            activeCategory = category;
+            renderFilters();
+            renderProjects();
+        };
+
+        // Initialize App
+        renderFilters();
+        renderProjects();
+        lucide.createIcons(); // Initial load for static icons
+    </script>
+</body>
+</html>
